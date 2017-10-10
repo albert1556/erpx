@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<title>I come from template!!</title>
+<style>
+body {
+    background-color: lightyellow;
+}
+em {
+	color: LightSeaGreen;
+}
+</style>
+</head>
+<body>
+    <h1>Program List</h1>
+    <table>
+    <tr>
+        <td>程式名稱</td>
+        <td>程式類型</td>
+        <td>建檔日期</td>
+        <td>建檔人員</td>
+        <td>修改日期</td>
+        <td>修改人員</td>
+    </tr>
+    {% for program in program_list %}
+    <tr>
+	<td>{{ program.program_name }}</td>
+        <td>{{ program.program_type }}</td>
+        <td>{{ program.creation_date }}</td>
+        <td>{{ program.created_by }}</td>
+        <td>{{ program.update_date }}</td>
+        <td>{{ program.updated_by }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
